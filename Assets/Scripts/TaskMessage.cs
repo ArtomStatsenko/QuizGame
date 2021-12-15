@@ -16,7 +16,7 @@ namespace ArtomStatsenko
             }
         }
 
-        public void ChangeTaskMessage(CellData cell)
+        public void SetTaskMessage(CellData cell)
         {
             messageUI.text = $"Find {cell.Name}";
         }

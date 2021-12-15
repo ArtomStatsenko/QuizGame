@@ -40,35 +40,29 @@ namespace ArtomStatsenko
 
         public void CreateNewTask(Diffuculty difficulty)
         {
-            Vector2 levelCells;
+            Vector2 levelGrid;
 
             switch (difficulty)
             {
                 case Diffuculty.Easy:
-                    levelCells = _levelData[0].Cells;
+                    levelGrid = _levelData[0].Cells;
                     break;
                 case Diffuculty.Medium:
-                    levelCells = _levelData[1].Cells;
+                    levelGrid = _levelData[1].Cells;
                     break;
                 case Diffuculty.Hard:
-                    levelCells = _levelData[2].Cells;
+                    levelGrid = _levelData[2].Cells;
                     break;
                 default:
                     return;
             }
 
-            int cellsNumber = (int)levelCells.x * (int)levelCells.y;
-            CellData[] cellData = new CellData[cellsNumber];
-
-            for (var i = 0; i < cellsNumber; i++)
-            {
-                cellData[i] = _cellData.RandomCell();
-            }
-
-            _spawner.SpawnCells(cellData, levelCells);
+            int cellCount = (int)levelGrid.x * (int)levelGrid.y;
+            CellData[] cellData = _cellData.GetUniqCells(cellCount);
+            _spawner.SpawnCells(cellData, levelGrid);
 
             var randomCell = cellData.RandomCell();
-            _taskMessage.ChangeTaskMessage(randomCell);
+            _taskMessage.SetTaskMessage(randomCell);
         }
     }
 }

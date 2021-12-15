@@ -5,7 +5,12 @@ namespace ArtomStatsenko
 {
     public static class Extentions
     {
+        public static CellData RandomCell(this CellData[] cellData) => cellData[Random.Range(0, cellData.Length)];
+
         //TODO add condition "if value does not repeat"
-        public static CellData RandomCell(this CellData[] cellData) => cellData[Random.Range(0, cellData.Length)];        
+        //public static CellData NotRepeatRandomCell(this CellData[] cellData)
+        //{
+        //    return cellData[Random.Range(0, cellData.Length)];
+        //}
     }
 }

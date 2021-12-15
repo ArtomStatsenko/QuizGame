@@ -8,6 +8,7 @@ namespace ArtomStatsenko
     public sealed class LevelData
     {
         [SerializeField] private int _levelNumber;
+        //TODO only int
         [SerializeField] private Vector2 _cells;
 
         public int LevelNumber => _levelNumber;

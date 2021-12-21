@@ -398,7 +398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59984a09b5e2e3f40ab813ea13ba47a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cellSetData: {fileID: 11400000, guid: b20a4debd07bddf4e8a76e21c9281f61, type: 2}
+  _cellSetData: {fileID: 11400000, guid: a3816c3891d90d348aead8a800b086e3, type: 2}
   _levelSetData: {fileID: 11400000, guid: 8b8fcf7236e96504fa88d2d67a9001e2, type: 2}
 --- !u!4 &888941927
 Transform:
@@ -506,6 +506,7 @@ GameObject:
   - component: {fileID: 2144893373}
   - component: {fileID: 2144893375}
   - component: {fileID: 2144893374}
+  - component: {fileID: 2144893376}
   m_Layer: 5
   m_Name: TaskMessage
   m_TagString: Untagged
@@ -628,3 +629,15 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2144893372}
   m_CullTransparentMesh: 0
+--- !u!114 &2144893376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2144893372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b46a073f3faee34fb77d95349af8a21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
